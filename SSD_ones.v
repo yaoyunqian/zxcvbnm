@@ -28,14 +28,15 @@ module SSD_ones(
     always @(Q)
     begin
         if (Q==4'b0) C=7'b0000001;
-        if (Q==4'b0001) C=7'b1001111;
-        if (Q==4'b0010) C=7'b0010010;
-        if (Q==4'b0011) C=7'b0000110;
-        if (Q==4'b0100) C=7'b1001100;
-        if (Q==4'b0101) C=7'b0100100;
-        if (Q==4'b0110) C=7'b0100000;
-        if (Q==4'b0111) C=7'b0001111;
-        if (Q==4'b1000) C=7'b0000000;
-        if (Q==4'b1001) C=7'b0000100;
+        else if (Q==4'b0001) C=7'b1001111;
+        else if (Q==4'b0010) C=7'b0010010;
+        else if (Q==4'b0011) C=7'b0000110;
+        else if (Q==4'b0100) C=7'b1001100;
+        else if (Q==4'b0101) C=7'b0100100;
+        else if (Q==4'b0110) C=7'b0100000;
+        else if (Q==4'b0111) C=7'b0001111;
+        else if (Q==4'b1000) C=7'b0000000;
+        else if (Q==4'b1001) C=7'b0000100;
+        else C=7'b1111111;
     end
 endmodule

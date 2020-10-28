@@ -28,10 +28,11 @@ module SSD_tens(
     always @(Q)
     begin
         if (Q==3'b0) C=7'b0000001;
-        if (Q==3'b001) C=7'b1001111;
-        if (Q==3'b010) C=7'b0010010;
-        if (Q==3'b011) C=7'b0000110;
-        if (Q==3'b100) C=7'b1001100;
-        if (Q==3'b101) C=7'b0100100;//display up to 5
+        else if (Q==3'b001) C=7'b1001111;
+        else if (Q==3'b010) C=7'b0010010;
+        else if (Q==3'b011) C=7'b0000110;
+        else if (Q==3'b100) C=7'b1001100;
+        else if (Q==3'b101) C=7'b0100100;//display up to 5
+        else C=7'b1111111;
     end
 endmodule
