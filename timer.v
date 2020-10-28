@@ -43,7 +43,9 @@ module timer(
         else if (Q_R<4'b1001)
             Q_R<=Q_R+1;
         else //default
+        begin
             Q_L<=3'b0;
             Q_R<=4'b0;
+        end
     end
 endmodule
